@@ -1,5 +1,5 @@
 # Elementwise decorator
-(Tried and tested in Python 2.7)
+(Tried and tested in Python 2.7 and Python 3.6)
 
 Implements element-wise mapping as in the R language, NumPy, or Maple among others: preserving the type of the sequence being iterated over (unlike Python's native map(fn, seq) function).
 
