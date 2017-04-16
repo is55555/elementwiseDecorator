@@ -4,7 +4,7 @@
 Implements element-wise mapping as in the R language, NumPy, or Maple among others: preserving the type of the sequence being iterated over (unlike Python's native map(fn, seq) function).
 
 
-Usage:
+Usage: (see also test.py)
 
     from elementwise import elementwise
 
