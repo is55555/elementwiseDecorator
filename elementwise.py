@@ -30,20 +30,3 @@ def elementwise(fn):
         else:
             return fn(arg)
     return closure
-
-
-def elementwise_old(fn):
-    def closure(arg):
-        if sys.version_info < (3,) and type(arg) == xrange:
-            # must come first because xrange actually has __getitem__
-            return propagate_xrange(fn, arg)
-        elif hasattr(arg, "__getitem__"):
-            return type(arg)(map(fn, arg))
-        elif hasattr(arg, "next") or hasattr(arg, "__next__"):
-            return propagate_iter(fn, arg)
-        elif type(arg) == set:
-            return set(map(fn, arg))
-        else:
-            return fn(arg)
-    return closure
-
